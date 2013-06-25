@@ -1,0 +1,307 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red255\green0\blue0;\red0\green0\blue255;\red128\green0\blue0;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\f0\fs22 * \b SSL\b0\par
+\par
+- \b SSL means\b0 : Server-Side Languages\par
+----\par
+- \cf1\b note important\cf0\b0 : always use colon placeholder when using sql in php\par
+\tab - \b ex\b0 : SELECT * FROM products WHERE id = :id;\par
+\tab - the :id will prevent sql injection - the hacker will not be able to do anything due to \b :id\b0  not being the direct value from the database\par
+----\par
+- \b Starting ColdFusion on my computer\b0 :\par
+\tab - \cf1\b note\cf0\b0 : make sure to stop red5 in ctrl + alt + delete > then servervices > then right click and click stop Red5\par
+\par
+- \b coldfusion \cf1 important\cf0\b0 :\par
+\tab - \b form.name\b0 :\par
+\tab\tab - form is used when using method="post"\par
+\tab - \b url.name\b0 :\par
+\tab\tab - url is used when using method="get"\par
+\par
+- \b note\b0 :\par
+\tab - \b composite key\b0 (adding more than one field as the primary key in a table)\par
+\tab\tab - \b ex\b0 : Create table CustomerProducts(\par
+\tab\tab\tab CustomerID int references Customers(CustomerID) not null,\par
+\tab\tab\tab ProductID int references Products(ProductID) not null,\par
+\tab\tab\tab OrderLimit int not null,\par
+\tab\tab\tab Primary key (CustomerID, ProductID)\par
+\tab\tab )\par
+\tab - Notice here that we have eliminated the identity column, and have instead defined a composite (multi-column) primary key as the combination of the CustomerID and ProductID columns.  Therefore, we do not have to create an additional unique constraint.  We also do not need an additional identity column that really serves no purpose.  We have not only simplified our data model physically, but we\rquote ve also made it more logically sound and the primary key of this table accurately explains what it is this table is modeling \endash  the relationship of a CustomerID to a ProductID.\par
+\par
+- \b note\b0 :\par
+\tab - \b php json response\b0 :\par
+\tab\tab - json_encode\par
+\tab - \b coldfusion json response\b0 :\par
+\tab\tab - SerializeJSON - this will convert coldfusion data into a JSON data\par
+\tab\tab - DeserializeJSON - this will convert  string data into CFML data, such as a CFML structure or array\par
+----\par
+- \b Day 1\b0\par
+\par
+- \b MVC\b0 : model view controller\par
+- \b views\b0 : are pages that are static, ex: header, footer, etc...\par
+\tab - getting the data, displaying the view\par
+- \b models\b0 : classes - database conections and actions(CRUD)\par
+- \b controller\b0 : main classes - navigates to the view (handles the traffic)\par
+\par
+- views: (head.html, content, footer.html, css)\par
+\tab - header\par
+\tab - footer\par
+- model: (Views.php, CRUD, js)\par
+\tab - Views.php\par
+\tab - Users.php\par
+\tab - Blog.php\par
+- controller: (index.php, landing.php)\par
+\tab - Home (or index)\par
+\tab - Landing\par
+\par
+----\par
+\par
+- useing sessions for security\par
+\tab - \b note\b0 : put the session in the index page (the session start that is)\par
+- flow charts, site diagrams - aka preproduction\par
+- \b github.com\b0 , or \b git\b0  - ways to send files to the server\par
+- database is in the model\par
+- dreamweaver, aptana\par
+- structure never changes, syntax does\par
+\par
+- Orcun Tagtekin (Orchun)\par
+- otagtekin@fullsail.com, 407-494-6014\par
+\tab - ext: 8956\par
+\tab - specialize in digital forensics\par
+--\par
+- \b CAPTCHA\b0 : checks to see if the user is human or a computer\par
+\par
+- XML: static data\par
+- JSON: one big object\par
+\par
+- \b constructor\b0 : function that gets exicuted when a function loads\par
+\par
+- \b PHP\b0 :\par
+\tab - uses dot syntax\par
+- \b ColdFusion\b0 :\par
+\tab - uses dashes and arrows\par
+--\par
+- \b railo\b0 :\par
+- railo express is what the students use: location: local disc C > program files (86) > railo > start\par
+\tab - double click the start in the folder\par
+\tab - in terminal tilda ~ means search for\par
+\tab - to send the SSH key to orgun: cp d_sa.pub ~/Desktop\par
+\tab\tab - zip the file up, then email the zipped folder\par
+\par
+--\par
+- server administrator > login\par
+\tab - may need to make a new username/password\par
+- data sources button (on left)\par
+\tab - this is where to start a database\par
+--\par
+\par
+- \b ssh\b0 :\par
+\tab - located in rich > .ssh\par
+\tab\tab - \b creating a ssh key\b0 :\par
+\tab\tab\tab - \b first type\b0 : cd ~/.ssh\par
+\tab\tab\tab - \b next type\b0 : ssh-keygen -t rsa -C 'rhutchison@fullsail.com' -N '' -v\par
+\tab\tab\tab - \b example\b0 : making SSH key for windows\par
+\tab\tab\tab\tab - {\field{\*\fldinst{HYPERLINK "http://help.github.com/win-set-up-git/"}}{\fldrslt{\ul\cf2 http://help.github.com/win-set-up-git/}}}\f0\fs22\par
+\par
+\tab\tab - \b cloning to github\b0 :\par
+\tab\tab\tab - pwd\par
+\tab\tab\tab - \b git clone git@wddbs.com:ssl1208\b0\par
+\tab\tab\tab - \b note\b0 : files with a . in front of them are hidden files\par
+\tab\tab\tab - \cf1\b note\cf0\b0 : always pull first\par
+\tab\tab\tab\tab - \b cd\b0  into the \b correct directory\b0\par
+\tab\tab\tab\tab - then \b git pull\b0\par
+\tab\tab\tab\tab - then\b  git add .\b0  (this is for adding all the folders)\par
+\tab\tab\tab\tab\tab - though one can do \b git add folderName\b0\par
+\tab\tab\tab\tab - then \b git commit -m 'test to display - this is more of a note'\par
+\tab\tab\tab\tab\tab - \cf1 note\cf0 : \b0 make sure to \b commit.\b0  it is like saving.\par
+\tab\tab\tab\tab - then when done with any edits type \b git push\b0\par
+\tab\tab\tab\tab - \b note\b0 : to see the status - \b git status\b0\par
+\par
+\tab\tab - \b deleting in git\b0 :  \par
+\tab\tab\tab - \b git rm\b0  folder/file.pyc\par
+\tab\tab\tab - \b git commit -m\b0  "text"\par
+\tab\tab\tab - \b git push\b0\par
+\tab\tab - \b Create a new repository on the command line\b0 :\par
+\tab\tab\tab - \b git init\b0\par
+\tab\tab\tab - \b git commit -m\b0  "first commit"\par
+\tab\tab\tab - \b git remote add origin\b0  git@github.com:richardHutchinson/ssl_python.git\par
+\tab\tab\tab - \b git push -u origin master\b0\par
+\par
+\tab\tab - \b Push an existing repository from the command line\b0 :\par
+\tab\tab\tab - \b git remote add origin\b0  git@github.com:richardHutchinson/ssl_python.git\par
+\tab\tab\tab - \b git push -u origin master\b0\par
+--\par
+\par
+- \b railo path to my xamp localhost files\b0 :\par
+\tab - local disk (C:) > program files(86) > railo > contexts > railo.xml > line with xamp path to websites folder\par
+\tab\tab - \b ex\b0 : <Set name="resourceBase">C:\\xampp\\htdocs\\websites</Set>\par
+--\par
+- git status\par
+\tab - tells the user what happened\par
+\par
+* this is known as file conversion\par
+- to send (aka push) the file\par
+\tab - git add nameOfFile\par
+- git commit -m 'something'\par
+- \cf3\b Important\cf0\b0 : always do pull before push\par
+- to pull: git pull\par
+--\par
+- cfinclude  is like include in php, includes header.cfm, etc...\par
+- <cflocation url = "/new_locaiton.cfm"> is like location in php, its the way to redirect the page\par
+<cfdump var = "variable_name"> - error reporting in coldfusion\par
+--\par
+- \b PHP\b0 :\par
+- \b single quotes and double quotes\b0 :\par
+\tab - single is literal, meaning display exactly what's inside, even variable names, not the value\par
+\tab - double quotes is non literal, meaning vaiable values will display not the vaiable name itself\par
+--\par
+- \b lab 1\b0 :\par
+- design something in html\par
+- \b views folder\b0 , which will have included files, html pages, aka anything static\par
+\tab - nav\par
+\tab - logo\par
+\tab - login\par
+\tab - footer\par
+\tab - header\par
+- \b models\b0 , which will have css\par
+\tab - CRUD - create, read, update, delete\par
+- \b controller\b0 ,\par
+--\par
+- uploadify: jquery plugin for uploading videos\par
+--\par
+- \b progress bars\b0 :\par
+\tab - action script\par
+\tab - java\par
+--\par
+- \b Day 2\b0 :\par
+\par
+- \b enctype\b0 :\par
+\tab - \b application/x-www-form-urlencoded\b0 :\par
+\tab\tab - Default. All characters are encoded before sent (spaces are converted to "+" symbols, and special characters are converted to ASCII HEX values)\par
+\tab - \b multipart/form-data\b0 :\par
+\tab\tab - No characters are encoded. This value is required when you are using forms that have a file upload control\par
+\tab - \b text/plain\b0 :\par
+\tab\tab - Spaces are converted to "+" symbols, but no special characters are encoded\par
+\par
+- array(): uses numbers and names\par
+\tab - array=[1,2,"name","name"];\par
+- associative array(): use actual names such as, rich, hutch, joe, john with values\par
+\tab - array=["name":"rich","number":"1"];\par
+\par
+* \b coldfusion operatores\b0 :\par
+- eq in coldfusion means equals, =\par
+- lt means less than\par
+\par
+- in the lab make sure to output the variables / values\par
+\par
+- <cfform comes with built in javascript validation\par
+\par
+- in php when testing forms use a question mark in the action="?". this will send the code to the same page\par
+--\par
+- \b Day 3\b0 :\par
+\par
+- views: (head.html, content, footer.html, css)\par
+\tab - header\par
+\tab - footer\par
+- model: (Views.php, CRUD, js)\par
+\tab - Views.php\par
+\tab - Users.php\par
+\tab - Blog.php\par
+- controller: (index.php, landing.php)\par
+\tab - Home (or index)\par
+\tab - Landing\par
+--\par
+- \b railo ui\b0  (for accessing a database in coldfusion):\par
+\tab - password: is password\par
+\par
+- click the link datasource\par
+--\par
+- \b PIPA\b0 :\par
+\tab - used when setting up forms for creditcards, hospitals, etc...\par
+--\par
+- \b big bullet\b0 :\par
+\tab - \b\fs28 =>\b0\fs22  means compare. in a for loop foreach($par as $someVal => $val), the $someVal value will be compared to the $val's value in an array\par
+- \b small bullet\b0 :\par
+\tab - \b\fs28 ->\b0\par
+--\par
+\b ===\b0  checks the datatype and the value\fs22\par
+----\par
+- \b Day 4\b0 :\par
+- controllers\par
+\par
+- new pages:\par
+\tab - coldfusion:\par
+\tab\tab - index.cfm\par
+\tab\tab - blog.cfm\par
+\tab - php:\par
+\tab\tab - index.php\par
+\tab\tab - controllers/blog.php\par
+\par
+- \b ../ in coldfusion\b0 :\par
+\tab - this is used to go up a file directory. this is the fix for connectiong to the index.cfm file\par
+\tab\tab - <cfset pro = \b createObject\b0 ("component","../models/viewModel")>\par
+\tab - can go inside the index.cfm file\par
+\tab\tab - \b ex\b0 : <cfset controllers = \b createObject\b0 ("component","models/controllers")>\par
+\par
+----\par
+\par
+- \b Day 5\b0 :\par
+\tab - salt, hashing, and sessions\par
+- \b sessions\b0 : sessions go at the top of the page\par
+\tab - \b application.session\b0 : this is used for coldfusion sessions\par
+- \b note\b0 : use the "id" of the user, etc... as the session's id\par
+- salt then hash - salt first then hash\par
+- the salt is a random set of letters the developer chooses to use, and the hash is the password\par
+\par
+- new pages:\par
+\tab - php: password-protection.php\par
+\tab - coldfusion: password-protection.cfm\par
+\par
+- PRD - means: project features, the flow and the goal of the project which go inside a document\par
+\tab - Product Requirement Document\par
+\par
+\par
+- \b $_SERVER['REQUEST_URI'];\b0\par
+\tab - will get the current url in the browse\par
+\par
+- \b preg_match('regular expression',the value to be compared to the regular expression);\par
+\b0\tab - this is used to check something and match the regular explression to it\par
+\par
+----\par
+\par
+- \b Day 6\b0 :\par
+\par
+- new pages:\par
+\tab - coldfusion:\par
+\tab\tab - \par
+\tab - php:\par
+\tab\tab - added code to index.php - img class\par
+\tab\tab - img.php\par
+\par
+- when uploading files use enctype = "multipart/form-data" in the top area of a form tag\par
+\par
+- \b coldfusion email and database setup\b0 :\par
+\tab - for email make sure to set up the SMTP in the coldfusion webpage in my local host\par
+\tab - make sure to set it up in the coldfusion webpage in my local host\par
+\par
+- GD:\par
+\tab - php:\par
+\tab\tab - image processing and GD\par
+\tab\tab - {\field{\*\fldinst{HYPERLINK "http://php.net/manual/en/book.image.php"}}{\fldrslt{\ul\cf2 http://php.net/manual/en/book.image.php}}}\f0\fs22\par
+\par
+----\par
+\par
+- \b Todd\b0 :\par
+\par
+- \b github repo\b0 :\par
+\tab - {\field{\*\fldinst{HYPERLINK "https://github.com/tbsmithFS/SSL1304"}}{\fldrslt{\ul\cf2 https://github.com/tbsmithFS/SSL1304}}}\f0\fs22\par
+\tab - \b git clone git@github.com:tbsmithFS/SSL1304.git\b0\par
+\tab - \b git pull\b0\par
+\par
+----\par
+\par
+- \b PyCharm\b0  and \b Django\b0 :\par
+\tab - \b PyCharm\b0  is code built on \b intelliJ\b0\par
+\tab\tab - \b intelliJ\b0  IDEA is a commercial Java IDE by JetBrains\par
+\tab - \b rich note\b0 : install PyCharm first, then start a new Django project. the IDE does everything. there should not be any additional installations.\par
+}
+ 

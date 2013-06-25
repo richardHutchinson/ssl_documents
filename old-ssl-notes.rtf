@@ -1,0 +1,273 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+{\colortbl ;\red128\green0\blue0;\red0\green128\blue128;\red0\green0\blue255;\red255\green0\blue0;\red0\green0\blue128;\red128\green0\blue128;\red0\green0\blue0;\red128\green128\blue128;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\f0\fs20 * \b SSL\b0\par
+\par
+- slide 80 (power point): "within organization - enterprise CMS"\par
+\par
+----\par
+\par
+* \cf1\b Look Into\cf0\b0 :\par
+\par
+* \cf2\b For SSL\cf0\b0 :\par
+\tab - WSP\par
+\tab - SFW 1&2\par
+\tab - MVC / Frameworks (FFW)\par
+\tab - \b OOP\b0 : object oriented programming\par
+\tab\tab - videos i have use pdo\par
+\tab\tab - Link (php.net): {\field{\*\fldinst{HYPERLINK "http://us.php.net/manual/en/book.pdo.php"}}{\fldrslt{\ul\cf3 http://us.php.net/manual/en/book.pdo.php}}}\f0\fs20\par
+\tab - \cf1\b\i pdo\cf0\b0\i0  not \b\i mysql\b0\i0  any more for php coding (\b note\b0 : when using $result = mysql_query($sql); think pdo). mysql is 5.0, pdo is php 5.3\par
+\tab - what is:\par
+\tab\tab - MAMP / railo: MAMP stands for "Macintosh, Apache, Mysql and PHP", its like \par
+\tab\tab - CFML - something that goes with or works with php\par
+\tab - XML and JSON data feed\par
+\tab - sessions, cookies (although i know the parameters)\par
+\par
+- PHP Data Objects\par
+\par
+- \b classes\b0 : 5.3 php; classes reduce the ammount of code in a php page.\par
+\tab - 5.3 is more object oriented\par
+\tab - Note: they work like A S 3 classes; a.k.a. public class, private class etc...\par
+\par
+----\par
+\par
+* \b Common Open-Source Stacks\b0 :\par
+- \b LAMP\b0 : Linux, Apache, MySQL, PHP = \b LAMP\b0\par
+- \b Rails\b0 : Linux, WEBrick, MySQL, Ruby/Rails = \b Rails\par
+- Railo\b0 :\b  \b0 Linux, Tomcat, MySQL, Rail CFML Engine = \b Railo\par
+\b0\par
+* \b Common Proprietary Stacks\b0 :\par
+- \b "Adobe" or "ColdFusion"\b0 : Linux, Tomcat, MySQL, ColdFusion Engine = \b "Adobe" or "ColdFusion"\b0\par
+- \b "Java" or "Old-acle": \b0 Linux, Tomcat, Oracle, JSP Engine = \b "Java" or "Old-acle"\b0\par
+- \b "Dot Net" or "Microsoft"\b0 : Windows, IIS, MS SQL Server, ASP.net Engine = \b "Dot Net" or "Microsoft"\b0\par
+\par
+* \b Uncommon Stacks\b0 :\par
+- \b Lasso\b0\par
+- \b DBRocket\b0\par
+\par
+- \b class will use\b0 : \b\i LAMP\b0\i0 , \b\i Railo\b0\i0\par
+\par
+-------------------------------- \cf4\b start\cf0\b0  --------------------------------\par
+\par
+- \b IntelliJ\b0 :\par
+\tab - WYSIWYG: for coding\par
+\tab - works like flash builder.\par
+\par
+- \b hints\b0 :\par
+\par
+- Ctrl + N: will open the class dropdown window\par
+\par
+----\par
+\par
+* \b Git and SmartGit\b0 :\par
+\tab - Git is the server i think and SmartGit is the application\par
+\tab - \b\i SmartGit shows the students work\b0\i0 , and allows them to push their work onto the server\par
+\par
+- install \b get\b0\par
+\tab - then \b smartGit\b0\par
+- install get first then smartGit\par
+\par
+- smart-git: holds all my files / the program\par
+\tab - files are located: documents > smart-git\par
+\par
+- \b\i Git Bash\b0\i0 : not sure what it does\par
+\par
+- students use terminal (aka mac). I use \b Git Bash\b0  (aka pc)\par
+\par
+----\par
+\par
+- changing the 8888 port on a mac to 9999; its in the railo folder, sometimes in webroot.\par
+\par
+----\par
+\par
+* \cf5\b ColdFusion\cf0\b0 :\par
+\par
+- ColdFusion: CFML, CFScript\par
+\par
+- \cf1\b Note\cf0\b0 : coldFusion walkthrough is located in the smart-git folder\par
+\par
+- \b railo\b0 :\par
+\tab - \cf1\b must start this first\cf0\b0 : go into the folder directory and then click:\par
+\tab\tab - \b\i start.bat\b0\i0  (this starts the server)\par
+\tab\tab - \b\i stop.bat\b0\i0  (this stops the server)\par
+\tab - \b location\b0 : program files(x86 - which is 32 bit not 64) > railo\par
+\tab\tab - this is like Apache, IIS, etc... for PC\par
+\par
+- \b Accessing websites in ColdFussion\b0 : use {\field{\*\fldinst{HYPERLINK "http://localhost:9999/SSL/day2.cfm"}}{\fldrslt{\ul\cf3 http://localhost:9999/SSL/day2.cfm}}}\f0\fs20\par
+\par
+----\par
+\par
+- \b include\b0 :\par
+\tab - <cfinclude template="day1.header.cfm">\par
+\par
+----\par
+\par
+* \b Echo for ColdFusion\b0 :\par
+\tab - cfoutput\par
+\par
+----\par
+\par
+git clone git@wddbs.com:ssldbs1110\par
+\par
+----\par
+\par
+* \b ColdFusion classes\b0 :\par
+\tab - reads the file name aka fileName.cfc (much like ActionScript 3)\par
+\tab\tab - the file name is the class file and the "class"\par
+\par
+----------------------------------------\par
+\par
+* \cf1\b PHP\cf0\b0 :\par
+\par
+\b class\b0 :\par
+Class myClass \{\par
+\tab private $myString;\par
+\tab public function functionName() \{\par
+\tab\tab this -> myString();\par
+\tab\}\par
+\tab public function get myString() \{\par
+\tab\tab return myString();\par
+\tab\}\par
+\}\par
+\par
+- \b static operator\b0  is a doulbe colon: "\cf1\b\fs48 ::\cf0\b0\fs20 "\par
+\tab - ex: myClass::get myString();\par
+\par
+- \b short hand echo\b0 :\par
+\tab - <?= $variable ?>\par
+\par
+- \b 3 types of functions\b0 :\par
+\tab - \b public\b0 : any class can see the function\par
+\tab - \b private\b0 : only that class can see the function\par
+\tab - \b protected\b0 : cant see form outside but can see with the local classes\par
+\par
+- \b DAO\b0 : data access object\par
+- \b Service\b0 : something that gives magic DAO back\par
+- \b Gateway\b0 : service that returns values instead of objects\par
+\par
+----\par
+\par
+- \b Lab 3: model classes ssl\b0 :\par
+\tab - \b PHP App Architecture 1: A Quick Example\b0\par
+\tab\tab - {\field{\*\fldinst{HYPERLINK "http://www.youtube.com/watch?v=I5yJxyX15D4"}}{\fldrslt{\ul\cf3 http://www.youtube.com/watch?v=I5yJxyX15D4}}}\f0\fs20\par
+\tab\tab - build a really basic PHP app. But instead of building it perfectly from scratch, this series starts with old-school procedural code and refactors it into more modern MVC-style code.\par
+\par
+\tab - \b PHP App Architecture 2: Extract a Model Class\b0\par
+\tab\tab - {\field{\*\fldinst{HYPERLINK "http://www.youtube.com/watch?v=Etv3VsSVybk"}}{\fldrslt{\ul\cf3 http://www.youtube.com/watch?v=Etv3VsSVybk}}}\f0\fs20\par
+\par
+\tab - \b PHP App Architecture 3: Extract a View Class\b0\par
+\tab\tab - {\field{\*\fldinst{HYPERLINK "http://www.youtube.com/watch?v=jGyZx5Fgk9g"}}{\fldrslt{\ul\cf3 http://www.youtube.com/watch?v=jGyZx5Fgk9g}}}\f0\fs20\par
+\par
+----\par
+\par
+* \b removing the ?id in URL links\b0 :\par
+\par
+- \b Mac\b0  use "touch" think thats thier commandprompt:\par
+\tab - htaccess\par
+\tab - go to rewite engine ON\par
+\tab - RewriteRule ^(u[a-z]+)/([a-z]+)$\par
+\par
+- \b PC\b0 :\par
+\par
+* \cf2\b\i How to enable or use .htaccess on Apache Web Servers in Windows\cf0\b0\i0 :\par
+- \b\i helpful link\b0\i0 : {\field{\*\fldinst{HYPERLINK "http://www.lancelhoff.com/enabling-htaccess-in-apache-on-windows/"}}{\fldrslt{\ul\cf3 http://www.lancelhoff.com/enabling-htaccess-in-apache-on-windows/}}}\f0\fs20\par
+\par
+- Using a text editor, open the httpd.conf file. In XAMPP, this file is found in the \\apache\\conf directory\par
+\par
+- Locate the following line of code:\par
+\par
+        \b\i #LoadModule rewrite_module modules/mod_rewrite.so\b0\i0\par
+\par
+- Remove the # from the line as seen below to enable the module:\par
+\par
+        \b\i LoadModule rewrite_module modules/mod_rewrite.so\b0\i0\par
+\par
+- Save the httpd.conf file and Restart your server\par
+\par
+- Restart your Apache Server\par
+\par
+If all goes well, you should now be able to use .htaccess files.\par
+\par
+- \cf1\b\i note\cf0\b0\i0 : use regular expressions aka: ^(u[a-z]+)/([a-z]+)$\par
+\par
+* \cf2\b Once the above is done (done on my PC) do this\cf0\b0 :\par
+\tab - \b\i helpful link\b0\i0 : {\field{\*\fldinst{HYPERLINK "http://www.technotaste.com/blog/htaccess-xampp-and-windows/"}}{\fldrslt{\ul\cf3 http://www.technotaste.com/blog/htaccess-xampp-and-windows/}}}\f0\fs20\par
+\tab - Search the httpd.conf file for 'mod_rewrite'. You'll find the statement that loads that module is commented out. Remove the '#' at the start of the line to un-comment it.\par
+\tab - By default, XAMPP on Windows does not allow .htaccess files to override the httpd.conf file. Search the httpd.conf file for 'AllowOverride'. You should find one or more statements that say 'AllowOverride None'. Wherever you find it (or more selectively, if you're savvy like that), change it to 'AllowOverride All'.\par
+\par
+----\par
+\par
+* \b MVC\b0 :\par
+- Model-View-Controller, an architecture for building interactive applications\par
+\par
+- \b model\b0 :\par
+\tab - definition: is how the underlying data is structured\par
+\tab - file should only have MySQL queries\par
+\tab - model may also hold the validation for the form\par
+\par
+\tab - \cf6\b manages the data\cf0\b0\par
+\par
+- \b view\b0 :\par
+\tab - definition: is what is presented to the user or consumer\par
+\tab - file should have html, php/cfm, xml, javascript, PDF, images\par
+\tab - should just give back data\par
+\par
+\tab - \cf6\b displays\cf7  the data sent from model\cf0\b0\par
+\par
+- \b controller\b0 :\par
+\tab - is the element that performs the processing\par
+\par
+\tab - \cf6\b handles\cf0  the model and view. the controller receives a request from the client, then tells the model to perform the requested operations and send the data to the view. the view will format the data (mostly using html), then the view will send the formatted data to the controller. the controller will send the formatted data to the user.\b0\par
+\par
+----\par
+\par
+server: every page\par
+\tab\par
+Application: everything in my folder, all users\par
+\par
+session: is one user; applies to one application\par
+\par
+client: one user, any app.\par
+\par
+request: requests something that will be persistant on the page (colors to make all text blue, etc...)\par
+\par
+----\par
+\par
+* \cf4\b Important\cf0\b0 : session_start should always be the very first thing at the top sessions\par
+\par
+----\par
+\par
+* session_destroy()\par
+- will remove all sessions, though don't use unless there is a need to remove all sessions\par
+\par
+----\par
+\par
+* \b coldFusion location is\b0 :\par
+<cflocation>\par
+\par
+----\par
+\par
+* \b securing a password\b0 :\par
+- \b crypt\b0 ()\par
+\tab - use bcrypt\par
+\tab - though bcrypt is slow, one might want to use the following for faster encryptions\par
+\tab\tab - SHA-256\par
+\tab\tab - or -\par
+\tab\tab - SHA-512\par
+\par
+----\par
+\par
+\cf8\b\i programming languages, etc...\cf0\b0\i0\par
+c, then c++, then python\par
+the off shoot from c++ would be when java came in, aka c, then c++, then java - though use python\par
+\par
+the three areas that go after c++ are python, java, perl - php was based on per, and c++ (php is related to perl due to RegEx, and c++ for syntax)\par
+\tab - coldFusion is related to java, and c++\par
+\par
+----\par
+\par
+* day 7\par
+\par
+- key is to use getData()\par
+\tab - get data from a webpage - i think\par
+}
+ 

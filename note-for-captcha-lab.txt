@@ -1,0 +1,6 @@
+- note for captcha lab:
+
+	- need to wright the message for the captch in the session
+	- make sure to wirte <img session["cap"] = "abc";
+		- cap is not created unless the page is refreshed(or then session is run)
+	- must use enctype="multipart ..."
